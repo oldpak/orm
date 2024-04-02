@@ -1,0 +1,58 @@
+{
+    "name": "oldpak/orm",
+    "type": "library",
+    "description": "Object-Relational-Mapper for PHP",
+    "keywords": ["orm", "database"],
+    "homepage": "https://www.doctrine-project.org/projects/orm.html",
+    "license": "MIT",
+    "authors": [
+        {"name": "oldpak", "email": "2233466866@qq.com"}
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^7.1",
+        "ext-pdo": "*",
+        "composer/package-versions-deprecated": "^1.8",
+        "oldpak/annotations": "^1.0",
+        "oldpak/cache": "^1.0",
+        "oldpak/collections": "^1.0",
+        "oldpak/common": "^1.0",
+        "oldpak/dbal": "^1.0",
+        "oldpak/event-manager": "^1.0",
+        "oldpak/inflector": "^1.0",
+        "oldpak/instantiator": "^1.0",
+        "oldpak/lexer": "^1.0",
+        "oldpak/persistence": "^1.0",
+        "symfony/console": "^3.0|^4.0|^5.0"
+    },
+    "require-dev": {
+        "doctrine/coding-standard": "^6.0",
+        "phpstan/phpstan": "^0.12.18",
+        "phpunit/phpunit": "^8.0",
+        "symfony/yaml": "^3.4|^4.0|^5.0",
+        "vimeo/psalm": "^3.11"
+    },
+    "suggest": {
+        "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
+    },
+    "autoload": {
+        "psr-4": { "Doctrine\\ORM\\": "lib/Doctrine/ORM" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Doctrine\\Tests\\": "tests/Doctrine/Tests",
+            "Doctrine\\Performance\\": "tests/Doctrine/Performance"
+        }
+    },
+    "bin": ["bin/doctrine"],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.7.x-dev"
+        }
+    },
+    "archive": {
+        "exclude": ["!vendor", "tests", "*phpunit.xml", ".travis.yml", "build.xml", "build.properties", "composer.phar", "vendor/satooshi", "lib/vendor", "*.swp"]
+    }
+}
